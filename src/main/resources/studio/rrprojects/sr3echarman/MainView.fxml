@@ -2,11 +2,26 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="rootPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studio.rrprojects.sr3echarman.MainController">
    <children>
-      <Label text="Text" />
-      <Button mnemonicParsing="false" text="Click Me!" />
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" spacing="20.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="189.0" prefWidth="1021.0" text="Hello and welcome to RunnerBuddy&#10;&#10;A Shadowrun 3rd Edition Character Creator and Manager&#10;&#10;To get started, please select and option below:" textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+               <children>
+                  <Button fx:id="buttonNewCharacter" mnemonicParsing="false" onAction="#createNewCharacter" text="Create New Character" />
+                  <Button fx:id="buttonRandomCharacter" disable="true" mnemonicParsing="false" onAction="#createRandomCharacter" text="Create Random Character" />
+                  <Button fx:id="buttonLoadCharacter" disable="true" mnemonicParsing="false" onAction="#loadCharacter" text="Load Existing Character" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </children>
-</VBox>
+</AnchorPane>
